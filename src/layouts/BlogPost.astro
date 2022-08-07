@@ -7,7 +7,7 @@ export interface Props {
 		title: string;
 		description: string;
 		publishDate: string;
-		heroImage?: {
+		heroImage: {
 			src: string;
 			alt: string;
 		};
@@ -30,15 +30,16 @@ const {
 			<header>
 				<h1 class="mx-8 mt-1 text-4xl font-bold">{title}</h1>
 				<p class="mx-8 text-lg font-medium text-frost80">{publishDate}</p>
-        <div class="-mx-24 my-16">
+        <div class="-mx-24 mt-4 mb-16">
           {heroImage && (
             <img
-              class="w-full"
+              class="max-w-full min-w-[50%] mx-auto"
               loading="lazy"
               src={heroImage.src}
               alt={heroImage.alt}
             />
           )}
+          <p class="text-lg italic text-frost80 mx-32 mt-4">{description}</p>
         </div>
 			</header>
 			<main class="text-lg text-snowstorm100">

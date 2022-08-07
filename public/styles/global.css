@@ -11,30 +11,63 @@ h1 {
   font-size: 2.25rem !important;
   line-height: 2.5rem;
   font-weight: 700 !important;
-  margin: 2.5rem 0 1rem 0 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 h2 {
   font-size: 1.5rem !important;
   line-height: 2rem;
   font-weight: 600 !important;
-  margin: 2.5rem 0 1rem 0 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 h3 {
   font-size: 1.25rem !important;
-  line-height: 1.75rem;
-  margin: 2rem 0 0.75rem 0 !important;
+  line-height: 2rem;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
 }
 
 p {
-  font-size: 1.125rem !important;
-  line-height: 1.75rem;
+  font-size: 1.25rem !important;
+  line-height: 2rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 pre {
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+p code {
+  background-color: #2e3440;
+  padding: 0 0.5rem;
+  border: 1px solid #4c566a;
+  border-radius: 0.25rem;
+}
+
+ul > li::before {
+  content: "-";
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+li {
+  font-size: 1.25rem !important;
+  line-height: 2rem;
+}
+
+a {
+  color: #88c0d0 !important;
+}
+
+blockquote {
+  border-left: 4px solid #eceff4;
+  border-radius: 2px;
+  padding-left: 12px;
 }
 
 @tailwind base;
