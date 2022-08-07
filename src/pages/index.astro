@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 import Intro from '../components/Intro.astro';
+import '../styles/blog.css';
 
 let title = 'Example Blog';
 let description = 'The perfect starter for your perfect blog.';
@@ -21,14 +22,14 @@ const posts = unsortedPosts.sort(function (a, b) {
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body class="pt-12 px-60">
+	<body class="pt-12 w-3/4 md:w-2/3 lg:w-1/2 mx-auto bg-polarnight100 text-snowstorm60">
 		<Header />
 
     <Intro />
 
 		<div>
 			<main>
-				<section aria-label="Blog post list">
+				<section aria-label="Blog post list" class="flex flex-col py-16 xl:px-8 space-y-8">
 					{posts.map(({ url, frontmatter }) => (
 						<BlogPostPreview
 							title={frontmatter.title}
