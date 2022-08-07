@@ -6,5 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [preact(), tailwind()],
-  site: `http://astro.build`,
+  site: `https://niftytyro.github.io`,
+  base: "niftytyro.me",
 });
