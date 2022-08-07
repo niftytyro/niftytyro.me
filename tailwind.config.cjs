@@ -11,7 +11,7 @@ module.exports = {
       snowstorm100: "#d8dee9",
       snowstorm80: "#e5e9f0",
       snowstorm60: "#eceff4",
-      frost100: "#5e81ac",
+      frost100: "#7e81ac",
       frost80: "#91a1b1",
       frost60: "#88c0d0",
     },
