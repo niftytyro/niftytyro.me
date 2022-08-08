@@ -1,11 +1,15 @@
 ---
+import { convertToKebab } from "../utils";
+
 export interface Props {
 	title: string;
 	description: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = `/assets/blog/meta/${convertToKebab(title)}.png`;
 ---
 
 <!-- Global Metadata -->
@@ -23,14 +27,14 @@ const { title, description } = Astro.props;
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={`/assets/blog/meta/${title}.png`} />
+<meta property="og:image" content={imageUrl} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={`/assets/blog/meta/${title}.png`} />
+<meta property="twitter:image" content={imageUrl} />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
