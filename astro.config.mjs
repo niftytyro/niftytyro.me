@@ -7,5 +7,4 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [preact(), tailwind()],
   site: `https://niftytyro.github.io`,
-  base: "niftytyro.me",
 });
